@@ -14,10 +14,10 @@ export function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  // EmailJS Configuration - Replace with your credentials from https://dashboard.emailjs.com
-  const EMAILJS_SERVICE_ID = 'service_o7mi0ds';
-  const EMAILJS_TEMPLATE_ID = 'template_ga6beui';
-  const EMAILJS_PUBLIC_KEY = 'IAXFnm0pMLQPYD3Kc';
+  // EmailJS Configuration - Using environment variables
+  const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -7,7 +7,7 @@ interface Message {
     content: string;
 }
 
-const OPENROUTER_API_KEY = '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';
+const OPENROUTER_API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
 
 const SYSTEM_PROMPT = `You are Emmanuel's AI assistant - a helpful chatbot embedded in Emmanuel Joshua's portfolio website. Your ONLY purpose is to provide information about Emmanuel Joshua, his projects, skills, experience, and how to contact him.
 
